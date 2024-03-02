@@ -1,21 +1,11 @@
-h1{
-    color: orange;
-    background-color: slategray;
-    font-size: 20px;
-    text-decoration: underline;
-    font-family: Arial;
-    text-align: center;
+span{
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
 }
-p{
-    color: slategray;
-    text-align: center;
-    line-height: 20px;
-    column-count: 2;
-}
-ul{
-    /* border-width: 2px;
-    border-style: solid;
-    border-color: crimson; */
-
-    
+div{
+    /* display: inline; */
+    border: 2px solid crimson;
+    margin: 20px;
+    padding: 20px;
 }
