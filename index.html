@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Learning HTML</title>
+</head>
+<body>
+    <h1>HTML Forms</h1>
+    
+    <form action="">
+        <label for="username">Input Username:</label>
+        <input type="text" id="username" name="username" placeholder="username" required>
+        <br><br>
+        <label for="email">Enter Email:</label>
+        <input type="email" id="email" name="email" placeholder="your email" required>
+        <br><br>
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" name="password" placeholder="choose a password" required>
+        <br><br>
+
+        <p>Select your age:</p>
+
+        <input type="radio" name="age" value="0-25" id="option-1">
+        <label for="option-1">0-25</label><br>
+        <input type="radio" name="age" value="26-50" id="option-2">
+        <label for="option-2">26-50</label><br>
+        <input type="radio" name="age" value="51+" id="option-3">
+        <label for="option-3">51+</label>
+
+        <br><br>
+
+        <label for="">Security Question:</label>
+        <select name="question" id="question">
+            <option value="q1">What color are your favorite pair of socks?</option>
+            <option value="q2">If you could be a vegetable what would it be?</option>
+            <option value="q3">What is your best ever security question?</option>
+        </select>
+
+        <br><br>
+
+        <label for="answer">Security Question Answer:</label>
+        <input type="text" id="answer" name="answer">
+
+        <br><br>
+
+        <label for="bio">Your Bio:</label><br>
+        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="About You..."></textarea>
+
+        <br>
+        <input type="submit" value="Submit the form">
+    </form>
+
+    <br><br>
+
+    <a href="cssbasics.html">CSS Basics</a>
+</body>
+</html>

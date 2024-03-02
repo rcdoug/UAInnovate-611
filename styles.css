@@ -1,0 +1,21 @@
+h1{
+    color: orange;
+    background-color: slategray;
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: Arial;
+    text-align: center;
+}
+p{
+    color: slategray;
+    text-align: center;
+    line-height: 20px;
+    column-count: 2;
+}
+ul{
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: crimson; */
+
+    
+}
