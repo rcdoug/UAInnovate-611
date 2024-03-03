@@ -18,9 +18,11 @@ async function main() {
     await downloadResume2(bucket);
     //downloadResume(bucket, "rowan@romanauskas.com");
 
+
+    
     await addApplicant(client, 
         {
-            name: "Rowan Romanauskas",
+            name: stdName,
             grad: "2026",
             officeLoc: "Alabama",
             email: "rowan@romanauskas.com",
@@ -33,7 +35,10 @@ async function main() {
 
     await client.close();
 }
-
+async function getValues(){
+    var stdName = document.getElementById("stdName").value;
+    
+}
 async function addApplicant(client, newApplicant){
     const result = await client.db("CGI").collection("Applicants").insertOne(newApplicant);
     console.log('New applicant created with the following id:' + result.insertedId);
