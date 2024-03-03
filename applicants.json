@@ -1,36 +1,13 @@
 {
   "applicants": [
     {
-      "name": "stdName",
-      "grad": "2026",
-      "officeLoc": "Alabama",
-      "email": "rowan@romanauskas.com",
+      "name": "Rowan Romanauskas",
+      "email": "rowan@romanauskas",
+      "data": "05/26",
       "phone": "603-852-9639",
-      "LinkedIn": "RowanRoman",
-      "progress": "Complete",
-      "feedback": "good",
-      "gauge": true
-    },
-    {
-      "name": "James Den",
-      "email": "james.den@example.com"
-    },
-    {
-      "name": "James Den",
-      "email": "james.den@example.com"
-    },
-    {
-      "name": "Questing",
-      "email": "james.den@example.com"
-    },
-    {
-      "name": "Rowam"
-    },
-    {
-      "name": "Rowam"
-    },
-    {
-      "name": "Rowam"
+      "role": "Cook",
+      "LinkedIn": "your mom",
+      "resume": "Resume.docx"
     }
   ]
 }

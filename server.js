@@ -22,12 +22,18 @@ app.post('/submit-form', (req, res) => {
       const jsonData = JSON.parse(data);
       jsonData.applicants.push({
         name: req.body.stdName,
+        email: req.body.stdEmail,
+        data: req.body.stdDate,
+        location: req.body.stdLocation,
+        phone: req.body.stdPhone,
+        school: req.body.stdScool,
+        role: req.body.stdRole,
+        LinkedIn: req.body.stdLinkedIn,
+        resume: req.body.stdResume
       });
       fs.writeFileSync('applicants.json', JSON.stringify(jsonData, null, 2));
-      res.send('Form submitted successfully!');
     } catch (error) {
       console.error('Error processing form submission:', error);
-      res.status(500).send('Internal Server Error');
     }
   });
   
