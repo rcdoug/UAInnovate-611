@@ -37,7 +37,16 @@ async function main() {
 }
 async function getValues(){
     var stdName = "ryan";
-    //document.getElementById("stdName").value;
+    //var stdName = document.getElementById("stdName").value;
+    //var stdEmail = document.getElementById("stdName").value;
+    //var stdDate = document.getElementById("stdDate").value;
+    //var stdLocation = document.getElementById("stdLocation").value;
+    //var stdPhone = document.getElementById("stdPhone").value;
+    //var stdSchool = document.getElementById("stdSchool").value;
+    //var stdRole = document.getElementById("stdRole").value;
+    //var stdLinkedIn = document.getElementById("stdLinkedIn").value;
+
+
     await client.connect();
     await addApplicant(client, 
         {

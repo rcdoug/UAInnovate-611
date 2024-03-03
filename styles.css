@@ -1,12 +1,31 @@
-body, ul, li, h1, h2, a{
+* {
     margin: 0;
     padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body{
+    margin: 0;
+    margin-top: 0;
+    padding: 0;
     font-family: arial;
+    background-color: #eeee;
+}
+h2{
+    color: #5236AB;
 }
 header{
+    position: sticky;
+    margin-top: 0;
+    top: 0px;
     max-width: 100%;
-    background-color: #f9f9f9;
     padding: 20px;
+    padding-right: 60px;
+    padding-left: 60px;
+    background-color: #ffff;
     font-size: 28px;
     border-bottom: 2px solid #0e0e0e;
 }
@@ -25,6 +44,7 @@ header .CGIheader{
 }
 .studentsection{
     padding: 40px;
+    background-color: #e9e9e9;
 }
 .studentapplyform{
     position: absolute;
@@ -33,30 +53,64 @@ header .CGIheader{
     padding: 30px;
     left: 20px;
 }
-.apmain{
-    width: 82%;
-    margin: 15px auto 0 auto;
-    padding: 2%;
-    border-radius: 12px;
-    border: 1px solid #e0e0e0;
+.PortalBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.apmain li{
-    display: inline;
-    margin: 10px;
-}
-.linkwrapper{
-    text-align: center;
-    width: 82%;
-    margin: 15px auto 0 auto;
-    padding: 2%;
-    border-radius: 12px;
-    border: 1px solid #e0e0e0;
-}
-.linkwrapper div{
-    display: inline-block;
+.stdPortalTextBox{
+    text-align: left;
+    width: 50%;
     padding: 20px;
-    width: 40%;
+    padding-left: 60px;
+    margin: 20px auto;
 }
-.images{
-    max-width: 50%;
+.stdPortalImage{
+    width: 50%;
+}
+.stdPortalImage img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    float: right;
+}
+
+.hrPortalImage{
+    width:50%;
+}
+.hrPortalImage img{
+    max-width:100%;
+    height: auto;
+    display: block;
+    float: left;
+}
+.hrPortalTextBox{
+    text-align: right;
+    width: 50%;
+    padding: 20px;
+    padding-right: 60px;
+    margin: 20px auto;
+}
+
+.Link{
+    background-color: #ffff;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 28px;
+}
+
+.stdContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stdContainer div{
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: 80px;
+    margin-top: 30px;
+    padding: 20px;
 }
