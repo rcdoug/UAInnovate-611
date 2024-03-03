@@ -16,15 +16,12 @@ header .CGIheader{
 .normheader{
     text-align: right;
 }
-main ul{
-    max-width: 100%;
-    text-align: center;
-}
 .images{
     max-width: 20%;
 }
 .studentapply{
     position: relative;
+    left: 50%;
     border: 2px solid red;
     display: inline-block;
     padding: 20px;
@@ -38,4 +35,27 @@ main ul{
     text-align: left;
     padding: 30px;
     left: 20px;
+}
+.apmain{
+    width: 82%;
+    margin: 15px auto 0 auto;
+    padding: 2%;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+.apmain li{
+    display: inline;
+    margin: 10px;
+}
+.linkwrapper{
+    text-align: center;
+    width: 82%;
+    margin: 15px auto 0 auto;
+    padding: 2%;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+.linkwrapper div{
+    display: inline-block;
+    padding: 20px;
 }
