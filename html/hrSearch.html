@@ -11,7 +11,14 @@
                 .then(jsonData =>{
                     forEach(applicant =>{
                         if(applicant.email == document.getElementById('searchVal').getValue()){
-                            
+                            const stdNameOld = applicant.name;
+                            const stdEmailOld = applicant.email;
+                            const stdLocationOld = applicant.location;
+                            const stdPhoneOld = applicant.phone;
+                            const stdLinkedInOld = applicant.LinkedIn;
+                            const stdProgressOld = applicant.progress;
+                            const stdGaugeOld = applicant.gague;
+                            const stdFeedbackOld = applicant.feedback;
                         }
                     })
                 })
