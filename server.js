@@ -92,8 +92,23 @@ app.post('/submit-form', (req, res) => {
     } catch(error){
       console.error("Error editing applicant: ", error);
     }
-    console.log('made it to this')
   });
+
+    app.post('/delete-user', (req,res) => {
+      try{
+        const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
+        const jsonData = JSON.parse(data);
+        const userToDel = req.body.searchVal;
+        const userIndex = jsonData.applicants.findIndex(applicant => applicant.email == userToDel);
+
+        if(userIndex!=-1){
+          jsonData.applicants.splice(userIndex, 1);
+          fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
+        }
+      } catch(error) {
+
+      }
+    });
   
 const server = http.createServer(app);
 const port = 3000;
