@@ -55,8 +55,8 @@ app.post('/submit-form', (req, res) => {
         role: req.body.stdRole,
         LinkedIn: req.body.stdLinkedIn,
         resume: req.body.stdResume,
-        progress: "N/A",
-        gauge: "N/A",
+        progress: req.body.question2,
+        gauge: req.body.stdInterest,
         feedback: "N/A"
       });
       fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));

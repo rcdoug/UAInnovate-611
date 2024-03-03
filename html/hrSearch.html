@@ -6,22 +6,43 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function (){
-            fetch("../applicants.json")
-                .then(response => response.json())
-                .then(jsonData =>{
-                    forEach(applicant =>{
-                        if(applicant.email == document.getElementById('searchVal').getValue()){
-                            const stdNameOld = applicant.name;
-                            const stdEmailOld = applicant.email;
-                            const stdLocationOld = applicant.location;
-                            const stdPhoneOld = applicant.phone;
-                            const stdLinkedInOld = applicant.LinkedIn;
-                            const stdProgressOld = applicant.progress;
-                            const stdGaugeOld = applicant.gague;
-                            const stdFeedbackOld = applicant.feedback;
-                        }
+            $("#searchForm").submit(function (event){
+                event.preventDefault();
+                console.log("working");    
+                fetch("applicants.json")
+                    .then(response => response.json())
+                    .then(jsonData =>{
+                        jsonData.applicants.forEach(applicant =>{
+                            if(applicant.email == document.getElementById('searchVal').value){
+                                const stdNameOld = applicant.name;
+                                const stdEmailOld = applicant.email;
+                                const stdDateOld = applicant.date;
+                                const stdLocationOld = applicant.location;
+                                const stdPhoneOld = applicant.phone;
+                                const stdLinkedInOld = applicant.LinkedIn;
+                                const stdProgressOld = applicant.progress;
+                                const stdGaugeOld = applicant.gague;
+                                const stdFeedbackOld = applicant.feedback;
+                                //const stdSchoolOld = applicant.school;
+                                const stdRoleOld = applicant.role;
+                            
+                                document.getElementById("stdName").value = stdNameOld;
+                                document.getElementById("stdEmail").value = stdEmailOld;
+                                document.getElementById("stdDate").value = stdDateOld;
+                                document.getElementById("question").value = stdLocationOld;
+                                document.getElementById("stdPhone").value = stdPhoneOld;
+                                document.getElementById("stdLinkedIn").value = stdLinkedInOld;
+                                document.getElementById("stdProgress").value = stdProgressOld;
+                                document.getElementById("stdInterest").value = stdGaugeOld;
+                                //document.getElementById("stdSchool").value = stdSchoolOld;
+                                document.getElementById("stdRole").value = stdRoleOld;
+                                //document.getElementById("std").value = std
+
+                                document.getElementById('hiddenForm').style.display = 'block';
+                            }
+                        })
                     })
-                })
+            })
         })
     </script>
 </head>
@@ -38,7 +59,7 @@
     </header>
 
     <div class="searchDiv">
-        <form action="">
+        <form id="searchForm" action="">
             <label for="searchVal">Enter Email of Profile:</label>
             <input type="text" id="searchVal" name="searchVal" placeholder="name@address.dom" required>
             <br>
@@ -47,7 +68,7 @@
     </div>  
 
     <div id="hiddenForm">
-        <form action="">
+        <form action="/edit-form" method = "post">
             <label for="stdName">Enter Name:</label>
             <input type="text" id="stdName" name="stdName" placeholder="Enter Name" required>
             <br><br>
