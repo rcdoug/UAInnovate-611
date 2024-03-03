@@ -29,7 +29,10 @@ app.post('/submit-form', (req, res) => {
         school: req.body.stdScool,
         role: req.body.stdRole,
         LinkedIn: req.body.stdLinkedIn,
-        resume: req.body.stdResume
+        resume: req.body.stdResume,
+        progress: "N/A",
+        gauge: "N/A",
+        feedback: "N/A"
       });
       fs.writeFileSync('applicants.json', JSON.stringify(jsonData, null, 2));
     } catch (error) {
