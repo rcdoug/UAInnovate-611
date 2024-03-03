@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Student Portal</title>
+</head>
+<body>
+    <header>
+        <div id="expand-box-header">
+            <a href="applicantportal.html">
+                <h1><span style="float: left; color: #e31937">CGI</span></h1> 
+            </a>
+            <h1><span style="float: right;">Student Application</span></h1>
+            <div style="clear:both;"></div>
+        </div>
+    </header>
+
+    <section class="studentapplyform">
+        <h2>Applicant Form</h2>
+        <br>
+        <form action="">
+            <label for="stdName">Enter Name:</label>
+            <input type="text" id="stdName" name="stdName" placeholder="Enter Name" required>
+            <br><br>
+            <label for="stdEmail">Enter Email:</label>
+            <input type="text" id="stdEmail" name="stdEmail" placeholder="Enter Email" required>
+            <br><br>
+            <label for="stdDate">Enter Graduation Date</label>
+            <input type="month" id="stdDate" name="stdDate" placeholder="Enter Expected Graduation Date" required>
+            <br><br>
+            <label for="stdLocation">Choose a location:</label>
+            <select name="question" id="question" required>
+                <option value="q1">Location One</option>
+                <option value="q2">Location Two</option>
+                <option value="q3">Location Three</option>
+            </select>
+            <br><br>
+            <label for="stdPhone">Enter phone number:</label>
+            <input type="tel" id="stdPhone" name="stdPhone" placeholder="(xxx)-xxx-xxx" required>
+            <br><br>
+            <label for="stdSchool">Enter School:</label>
+            <input type="text" id="stdSchool" name="stdSchool" placeholder="School Name, ST" required>
+            <br><br>
+            <label for="stdRole">Enter Role Applying For:</label>
+            <input type="text" id="stdRole" name="stdRole" placeholder="Enter Role" required>
+            <br><br>
+            <label for="stdLinkedIn">Enter LinkedIn URL</label>
+            <input type="text" id="stdLinkedIn" name="stdLinkedIn" placeholder="Enter LinkedIn URL">
+            <br><br>
+            <input type="submit" value="Submit the form">
+        </form>
+    </section>
+</body>
+</html>
