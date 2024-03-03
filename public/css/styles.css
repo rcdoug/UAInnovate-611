@@ -12,12 +12,14 @@ body{
     margin-top: 0;
     padding: 0;
     font-family: arial;
+    font-size: 20px;
     background-color: #eeee;
 }
 h2{
     color: #5236AB;
 }
 header{
+    font-size: 40px;
     position: sticky;
     margin-top: 0;
     top: 0px;
@@ -26,7 +28,6 @@ header{
     padding-right: 60px;
     padding-left: 60px;
     background-color: #ffff;
-    font-size: 28px;
     border-bottom: 2px solid #0e0e0e;
     z-index: 1;
 }
@@ -71,6 +72,10 @@ input[type=submit] {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 22px;
+}
+.PortalBlock h2{
+    font-size: 30px;
 }
 .stdPortalTextBox{
     text-align: left;
@@ -99,10 +104,11 @@ input[type=submit] {
     float: left;
 }
 .hrPortalTextBox{
-    text-align: right;
+    text-align: left;
     width: 50%;
     padding: 20px;
     padding-right: 60px;
+    padding-left: 30px;
     margin: 20px auto;
 }
 
@@ -119,6 +125,7 @@ input[type=submit] {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 .stdContainer div{
     display: block;
@@ -127,6 +134,10 @@ input[type=submit] {
     margin: 80px;
     margin-top: 30px;
     padding: 20px;
+    border: 2px solid #5236ab;
+    border-radius: 24px;
+    background-color: #ffff;
+    box-sizing: border-box;
 }
 
 .searchDiv{
@@ -161,9 +172,10 @@ input[type=submit] {
     color: white;
 }
 .tableDiv{
-    position: absolute;
+    text-align: center;
     padding: 20px;
-    left: 25%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hiddenForm{

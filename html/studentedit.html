@@ -39,7 +39,7 @@
 
                                 document.getElementById('hiddenSearchVal').value = document.getElementById('searchVal').value
 
-                                document.getElementById('hiddenForm').style.display = 'block';
+                                document.getElementById('hiddenFo').style.display = 'block';
                             }
                         })
                     })
@@ -68,43 +68,43 @@
         </form>
     </div>  
 
-    <div class="hiddenForm">
-        <h2>Edit Values:</h2>
+    <div id="hiddenFo" class="hiddenForm" style="display: none;">
+        <h2>Current Values:</h2>
         <br>
         <form action="/edit-form-student" method = "post">
-            <label for="stdName">Enter Name:</label>
+            <label for="stdName">Name:</label>
             <input type="text" id="stdName" name="stdName" placeholder="Enter Name" required>
             <br><br>
-            <label for="stdEmail">Enter Email:</label>
+            <label for="stdEmail">Email:</label>
             <input type="text" id="stdEmail" name="stdEmail" placeholder="Enter Email" required>
             <br><br>
-            <label for="stdDate">Enter Graduation Date</label>
+            <label for="stdDate">Graduation Date</label>
             <input type="text" id="stdDate" name="stdDate" placeholder="MM/YY" required>
             <br><br>
-            <label for="stdLocation">Choose a location:</label>
+            <label for="stdLocation">Office Location:</label>
             <br>
             <select name="stdLocation" id="stdLocation" required>
-                <option value="Location Place Holder 1">Location Place Holder 1</option>
-                <option value="Location Place Holder 2">Location Place Holder 2</option>
-                <option value="Location Place Holder 3">Location Place Holder 3</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Georgia">Georgia</option>
+                <option value="France">France</option>
             </select>
             <br><br>
-            <label for="stdPhone">Enter phone number:</label>
+            <label for="stdPhone">Phone Number:</label>
             <input type="text" id="stdPhone" name="stdPhone" placeholder="xxx-xxx-xxxx" required>
             <br><br>
-            <label for="stdSchool">Enter School:</label>
+            <label for="stdSchool">School:</label>
             <input type="text" id="stdSchool" name="stdSchool" placeholder="School Name, ST" required>
             <br><br>
-            <label for="stdRole">Enter Role Applying For:</label>
+            <label for="stdRole">Role Applying For:</label>
             <input type="text" id="stdRole" name="stdRole" placeholder="Enter Role" required>
             <br><br>
-            <label for="stdLinkedIn">Enter LinkedIn URL</label>
+            <label for="stdLinkedIn">LinkedIn URL</label>
             <input type="text" id="stdLinkedIn" name="stdLinkedIn" placeholder="Enter LinkedIn URL">
             <br><br>
-            <label for="stdResume">Upload Resume PDF</label>
+            <label for="stdResume">Resume PDF</label>
             <input type="file" id="stdResume" name="stdResume" placeholder="Upload Resume PDF">
             <br><br>
-            <input type="submit" value="Submit the form">
+            <input type="submit" value="Update Values">
             <br><br>
             <input type ="hidden" id = "hiddenSearchVal" name = "hiddenSearchVal" value = "">
         </form>
