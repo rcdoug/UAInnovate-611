@@ -92,7 +92,6 @@ app.post('/submit-form', (req, res) => {
     } catch(error){
       console.error("Error editing applicant: ", error);
     }
-    console.log('made it to this')
   });
   
 const server = http.createServer(app);
