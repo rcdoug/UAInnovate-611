@@ -3,14 +3,14 @@
     {
       "name": "Rowan",
       "email": "t",
-      "date": "t",
+      "date": "22/37",
       "location": "Location Place Holder 1",
       "phone": "t",
       "role": "t",
       "LinkedIn": "t",
       "resume": "",
       "progress": "Completed First Interview",
-      "gauge": "3",
+      "gauge": "undefined",
       "school": "undefined"
     },
     {
@@ -23,7 +23,7 @@
       "LinkedIn": "ryan-douglas-123512",
       "resume": "",
       "progress": "Completed First Interview",
-      "gauge": "3",
+      "gauge": "undefined",
       "school": "University of Alabama, AL"
     }
   ]
