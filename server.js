@@ -38,6 +38,7 @@ app.post('/submit-form', (req, res) => {
         feedback: "N/A"
       });
       fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
+      res.redirect('/index.html');
     } catch (error) {
       console.error('Error processing form submission:', error);
     }
@@ -62,6 +63,7 @@ app.post('/submit-form', (req, res) => {
         feedback: "N/A"
       });
       fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
+      res.redirect('/index.html');
     } catch (error) {
       console.error('Error processing form submission:', error);
     }
@@ -90,6 +92,7 @@ app.post('/submit-form', (req, res) => {
         applicant.feedback = req.body.stdFeedback;
 
         fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData,null, 2));
+        res.redirect('/index.html');
       }
     } catch(error){
       console.error("Error editing applicant: ", error);
@@ -133,6 +136,7 @@ app.post('/submit-form', (req, res) => {
         if(userIndex!=-1){
           jsonData.applicants.splice(userIndex, 1);
           fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
+          res.redirect('/index.html');
         }
       } catch(error) {
 

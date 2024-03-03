@@ -1,7 +1,11 @@
 {
   "applicants": [
     {
+<<<<<<< HEAD
       "name": "Rowan",
+=======
+      "name": "t",
+>>>>>>> a14d165b4a4df9b79cd696d03ace8e068ce4021d
       "email": "t",
       "date": "t",
       "location": "Location Place Holder 1",
@@ -11,8 +15,25 @@
       "resume": "",
       "progress": "N/A",
       "gauge": "N/A",
+<<<<<<< HEAD
       "feedback": "N/A",
       "school": "undefined"
+=======
+      "feedback": "N/A"
+    },
+    {
+      "name": "h",
+      "email": "h",
+      "date": "h",
+      "location": "Location Place Holder 2",
+      "phone": "h",
+      "role": "h",
+      "LinkedIn": "h",
+      "resume": "",
+      "progress": "N/A",
+      "gauge": "N/A",
+      "feedback": "N/A"
+>>>>>>> a14d165b4a4df9b79cd696d03ace8e068ce4021d
     }
   ]
 }
