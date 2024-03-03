@@ -59,7 +59,7 @@ app.post('/submit-form', (req, res) => {
         gauge: "N/A",
         feedback: "N/A"
       });
-      fs.writeFileSync(__dirName + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
+      fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
     } catch (error) {
       console.error('Error processing form submission:', error);
     }
