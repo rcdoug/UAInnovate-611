@@ -12,17 +12,17 @@ async function main() {
     var bucket = new mongodb.GridFSBucket(db, {bucketName: "Resumes"});
     const Resumes = db.collection("Resumes.files");
     
-    await uploadResume(bucket, "Resume.docx", "rowan@romanauskas.com");
+    //await uploadResume(bucket, "Resume.docx", "rowan@romanauskas.com");
     //await bucket.openDownloadStreamByName("Resume.docx").pipe(fs.createWriteStream('./outputFile.docx'));
 
-    await downloadResume2(bucket);
+    //await downloadResume2(bucket);
     //downloadResume(bucket, "rowan@romanauskas.com");
 
 
     
     await addApplicant(client, 
         {
-            name: stdName,
+            name: 'stdName',
             grad: "2026",
             officeLoc: "Alabama",
             email: "rowan@romanauskas.com",
@@ -36,28 +36,18 @@ async function main() {
     await client.close();
 }
 async function getValues(){
-    var stdName = "ryan";
-    //var stdName = document.getElementById("stdName").value;
-    //var stdEmail = document.getElementById("stdName").value;
-    //var stdDate = document.getElementById("stdDate").value;
-    //var stdLocation = document.getElementById("stdLocation").value;
-    //var stdPhone = document.getElementById("stdPhone").value;
-    //var stdSchool = document.getElementById("stdSchool").value;
-    //var stdRole = document.getElementById("stdRole").value;
-    //var stdLinkedIn = document.getElementById("stdLinkedIn").value;
-
-
+    var stdName = "test";
     await client.connect();
+    alert("test");
     await addApplicant(client, 
         {
             name: stdName
-        })
-    
+        });
+    alert("test");
 }
 async function addApplicant(client, newApplicant){
-    await client.connect();
     const result = await client.db("CGI").collection("Applicants").insertOne(newApplicant);
-    console.log('New applicant created with the following id:' + result.insertedId);
+    //alert('New applicant created with the following id:' + result.insertedId);
 }
 
 async function uploadResume(bucket, fileName, email){
@@ -81,5 +71,6 @@ async function downloadResume(bucket, userEmail){
             console.log("here");
     }
 }
+getValues();
 main().catch(console.error);
 
