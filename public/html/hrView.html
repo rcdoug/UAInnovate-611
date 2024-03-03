@@ -5,36 +5,35 @@
     <title>HR View</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function(){
-            // Function to load and display JSON data
-            function loadJSON(){
-                $.getJSON("applicants.json", function(data){
-                    // Clear any existing data
-                    $("#applicantsTable tbody").empty();
-                    // Loop through each group of users
-                    $.each(data.applicants, function(index, applicant){
-                        var row = "<tr>" +
-                            "<td contenteditable='true'>" + applicants.name + "</td>" +
-                            "<td contenteditable='true'>" + applicants.officeLoc + "</td>" +
-                            "<td contenteditable='true'>" + applicants.grad + "</td>" +
-                            "<td contenteditable='true'>" + applicants.progress + "</td>" +
-                            "<td contenteditable='true'>" + applicants.guage + "</td>" +
-                            "</tr>";
-                        $("#applicantsTable tbody").append(row);
+        $(document).ready(function (){
+            fetch(__dirname + 'applicants.json')
+                .then(response => response.json())
+                .then(jsonData =>{
+                    const tableBody = document.getElementById('applicantsTable').getElementsByTagName('tbody')[0];
+                    jsonData.applicants.forEach(applicant => {
+                        const row = tableBody.insertRow();
+                        const nameCell = row.insertCell(0);
+                        const locationCell = row.insertCell(1);
+                        const dateCell = row.insertCell(2);
+                        const progressCell = row.insertCell(3);
+                        const gaugeCell = row.insertCell(4);
+
+                        nameCell.innerHTML = applicant.name;
+                        locationCell.innerHTML = applicant.location;
+                        dateCell.innerHTML = applicant.date;
+                        progressCell.innerHTML = applicant.progress;
+                        gaugeCell.innerHTML = applicant.gauge;
                     });
                 });
-            }
-            
-            // Call the function to load JSON data when the page loads
-            loadJSON();
         });
+
     </script>
 </head>
 <body>
 
     <header>
         <div id="expand-box-header">
-            <a href="/public/html/index.html">
+            <a href="html/index.html">
                 <h1><span style="float: left; color: #e31937">CGI</span></h1> 
             </a>
             <h1><span style="float: right;">HR Portal</span></h1>

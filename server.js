@@ -23,8 +23,8 @@ app.post('/submit-form', (req, res) => {
       jsonData.applicants.push({
         name: req.body.stdName,
         email: req.body.stdEmail,
-        data: req.body.stdDate,
-        location: req.body.stdLocation,
+        date: req.body.stdDate,
+        location: req.body.question,
         phone: req.body.stdPhone,
         school: req.body.stdScool,
         role: req.body.stdRole,
