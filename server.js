@@ -10,6 +10,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.static("express"));
 app.use(express.static('public'));
 app.use(express.static('html'));
+app.use(fileUpload());
 
 app.get('', function(req,res){
     res.sendFile(path.join(__dirname, "html", "index.html"));
@@ -21,6 +22,7 @@ app.post('/submit-form', (req, res) => {
     try {
       const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
       const jsonData = JSON.parse(data);
+      if(req.files && req.files.)
       jsonData.applicants.push({
         name: req.body.stdName,
         email: req.body.stdEmail,
@@ -86,6 +88,33 @@ app.post('/submit-form', (req, res) => {
         applicant.progress = req.body.stdProgress;
         applicant.gauge = req.body.stdInterest;
         applicant.feedback = req.body.stdFeedback;
+
+        fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData,null, 2));
+      }
+    } catch(error){
+      console.error("Error editing applicant: ", error);
+    }
+  });
+
+  app.post('/edit-form-student', (req,res) => {
+    try{
+      const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
+      const jsonData = JSON.parse(data);
+      const applicantEmail = req.body.hiddenSearchVal;
+      console.log(req.body.hiddenSearchVal);
+      const applicant = jsonData.applicants.find(applicant => applicant.email == applicantEmail);
+      if(applicant) {
+        applicant.name = req.body.stdName;
+        applicant.email = req.body.stdEmail;
+        applicant.date = req.body.stdDate;
+        applicant.location = req.body.stdLocation;
+        applicant.phone = req.body.stdPhone;
+        applicant.school = req.body.stdSchool;
+        applicant.role = req.body.stdRole;
+        applicant.LinkedIn = req.body.stdLinkedIn;
+        //applicant.progress = req.body.stdProgress;
+        //applicant.gauge = req.body.stdInterest;
+        //applicant.feedback = req.body.stdFeedback;
 
         fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData,null, 2));
       }

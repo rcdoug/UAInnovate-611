@@ -20,9 +20,9 @@
                                 const stdLocationOld = applicant.location;
                                 const stdPhoneOld = applicant.phone;
                                 const stdLinkedInOld = applicant.LinkedIn;
-                                const stdProgressOld = applicant.progress;
-                                const stdGaugeOld = applicant.gague;
-                                const stdFeedbackOld = applicant.feedback;
+                                //const stdProgressOld = applicant.progress;
+                                //const stdGaugeOld = applicant.gague;
+                                //const stdFeedbackOld = applicant.feedback;
                                 const stdSchoolOld = applicant.school;
                                 const stdRoleOld = applicant.role;
                             
@@ -32,8 +32,8 @@
                                 document.getElementById("stdLocation").value = stdLocationOld;
                                 document.getElementById("stdPhone").value = stdPhoneOld;
                                 document.getElementById("stdLinkedIn").value = stdLinkedInOld;
-                                document.getElementById("stdProgress").value = stdProgressOld;
-                                document.getElementById("stdInterest").value = stdGaugeOld;
+                                //document.getElementById("stdProgress").value = stdProgressOld;
+                                //document.getElementById("stdInterest").value = stdGaugeOld;
                                 document.getElementById("stdSchool").value = stdSchoolOld;
                                 document.getElementById("stdRole").value = stdRoleOld;
 
@@ -71,7 +71,7 @@
     <div class="hiddenForm">
         <h2>Edit Values:</h2>
         <br>
-        <form action="/edit-form" method = "post">
+        <form action="/edit-form-student" method = "post">
             <label for="stdName">Enter Name:</label>
             <input type="text" id="stdName" name="stdName" placeholder="Enter Name" required>
             <br><br>
