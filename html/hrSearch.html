@@ -4,6 +4,11 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>HR Portal</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script>
+        function unHide(){
+            document.getElementById("hiddenForm").style.display="block";
+        }
+    </script> -->
     <script>
         $(document).ready(function (){
             $("#searchForm").submit(function (event){
@@ -39,7 +44,7 @@
 
                                 document.getElementById('hiddenSearchVal').value = document.getElementById('searchVal').value
 
-                                document.getElementById('hiddenForm').style.display = 'block';
+                                document.getElementById('hiddenF').style.display = 'block';
                             }
                         })
                     })
@@ -68,43 +73,43 @@
         </form>
     </div>  
 
-    <div class="hiddenForm">
-        <h2>Edit Values:</h2>
+    <div class="hiddenForm" id="hiddenF" style="display: none;">
+        <h2>Current Values:</h2>
         <br>
         <form action="/edit-form" method = "post">
-            <label for="stdName">Enter Name:</label>
+            <label for="stdName">Name:</label>
             <input type="text" id="stdName" name="stdName" placeholder="Enter Name" required>
             <br><br>
-            <label for="stdEmail">Enter Email:</label>
+            <label for="stdEmail">Email:</label>
             <input type="text" id="stdEmail" name="stdEmail" placeholder="Enter Email" required>
             <br><br>
-            <label for="stdDate">Enter Graduation Date</label>
+            <label for="stdDate">Graduation Date</label>
             <input type="text" id="stdDate" name="stdDate" placeholder="MM/YY" required>
             <br><br>
-            <label for="stdLocation">Choose a location:</label>
-            <br>
+            <label for="stdLocation">Location:</label>
+            <br><br>
             <select name="stdLocation" id="stdLocation" required>
                 <option value="Location Place Holder 1">Location Place Holder 1</option>
                 <option value="Location Place Holder 2">Location Place Holder 2</option>
                 <option value="Location Place Holder 3">Location Place Holder 3</option>
             </select>
             <br><br>
-            <label for="stdPhone">Enter phone number:</label>
+            <label for="stdPhone">Phone number:</label>
             <input type="text" id="stdPhone" name="stdPhone" placeholder="xxx-xxx-xxxx" required>
             <br><br>
-            <label for="stdSchool">Enter School:</label>
+            <label for="stdSchool">School:</label>
             <input type="text" id="stdSchool" name="stdSchool" placeholder="School Name, ST" required>
             <br><br>
-            <label for="stdRole">Enter Role Applying For:</label>
+            <label for="stdRole">Role Applying For:</label>
             <input type="text" id="stdRole" name="stdRole" placeholder="Enter Role" required>
             <br><br>
-            <label for="stdLinkedIn">Enter LinkedIn URL</label>
+            <label for="stdLinkedIn">LinkedIn URL</label>
             <input type="text" id="stdLinkedIn" name="stdLinkedIn" placeholder="Enter LinkedIn URL">
             <br><br>
-            <label for="stdResume">Upload Resume PDF</label>
+            <label for="stdResume">Resume PDF</label>
             <input type="file" id="stdResume" name="stdResume" placeholder="Upload Resume PDF">
             <br><br>
-            <label for="stdProgress">Select Candidate Progress</label>
+            <label for="stdProgress">Candidate Progress</label>
             <select name="stdProgress" id="stdProgress" required>
                 <option value="N/A">Unselected</option>
                 <option value="Uninterviewed">Uninterviewed</option>
@@ -112,10 +117,10 @@
                 <option value="Completed Final Interview">Completed Final Interview</option>
             </select>
             <br><br>
-            <label for="stdInterest">Enter interest in Candidate</label>
+            <label for="stdInterest">Interest in Candidate</label>
             <input type="text" id="stdInterest" name="stdInterest" placeholder="Enter Interest in Candidate (0-5)">
             <br><br>
-            <input type="submit" value="Submit the form">
+            <input type="submit" value="Update Values">
             <br><br>
             <input type ="hidden" id = "hiddenSearchVal" name = "hiddenSearchVal" value = "">
         </form>
