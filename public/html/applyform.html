@@ -18,7 +18,7 @@
     <section class="studentapplyform">
         <h2 style="font-size: 32px;">Applicant Form</h2>
         <br>
-        <form action="">
+        <form action="/submit-form" method = "post">
             <label for="stdName">Enter Name:</label>
             <input type="text" id="stdName" name="stdName" placeholder="Enter Name" required>
             <br><br>
@@ -51,7 +51,7 @@
             <label for="stdResume">Upload Resume PDF</label>
             <input type="file" id="stdResume" name="stdResume" placeholder="Upload Resume PDF">
             <br><br>
-            <input type="submit" onclick="getValues()" value="Submit the form">
+            <input type="submit" value="Submit the form">
         </form>
     </section>
 </body>
