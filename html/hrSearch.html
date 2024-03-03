@@ -3,6 +3,20 @@
 <head>
     <link rel="stylesheet" href="css/styles.css">
     <title>HR Portal</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            fetch("../applicants.json")
+                .then(response => response.json())
+                .then(jsonData =>{
+                    forEach(applicant =>{
+                        if(applicant.email == document.getElementById('searchVal').getValue()){
+                            
+                        }
+                    })
+                })
+        })
+    </script>
 </head>
 <body>
 

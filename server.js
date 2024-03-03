@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.post('/submit-form', (req, res) => {
     try {
-      const data = fs.readFileSync('applicants.json', 'utf8');
+      const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
       const jsonData = JSON.parse(data);
       jsonData.applicants.push({
         name: req.body.stdName,
@@ -35,7 +35,7 @@ app.post('/submit-form', (req, res) => {
         gauge: "N/A",
         feedback: "N/A"
       });
-      fs.writeFileSync('applicants.json', JSON.stringify(jsonData, null, 2));
+      fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
     } catch (error) {
       console.error('Error processing form submission:', error);
     }
@@ -43,7 +43,7 @@ app.post('/submit-form', (req, res) => {
 
   app.post('/submit-form-hr', (req, res) => {
     try {
-      const data = fs.readFileSync('applicants.json', 'utf8');
+      const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
       const jsonData = JSON.parse(data);
       jsonData.applicants.push({
         name: req.body.stdName,
@@ -59,19 +59,16 @@ app.post('/submit-form', (req, res) => {
         gauge: "N/A",
         feedback: "N/A"
       });
-      fs.writeFileSync('applicants.json', JSON.stringify(jsonData, null, 2));
+      fs.writeFileSync(__dirName + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
     } catch (error) {
       console.error('Error processing form submission:', error);
     }
   });
 
-  app.post('/search-form', (req,res) => {
-
-  })
 
   app.post('/edit-form', (req,res) => {
     try{
-      const data = fs.readFileSync('applicants.json', 'utf8');
+      const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
       const jsonData = JSON.parse(data);
       const applicantEmail = req.body.searchVal;
       const applicant = jsonData.applicants.find(applicant => applicant.email == applicantEmail);
@@ -88,7 +85,7 @@ app.post('/submit-form', (req, res) => {
         applicant.gauge = req.body.stdGauge;
         applicant.feedback = req.body.stdFeedback;
 
-        fs.writeFileSync('applicants.json', JSON.stringify(jsonData,null, 2));
+        fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData,null, 2));
       }
     } catch(error){
       console.error("Error editing applicant: ", error);
