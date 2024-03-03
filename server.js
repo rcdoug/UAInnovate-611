@@ -8,10 +8,10 @@ const bodyParser = require('body-parser');
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(express.static("express"));
-
 app.use(express.static('public'));
+
 app.get('', function(req,res){
-    res.sendFile(path.join(__dirname+'\index.html'));
+    res.sendFile(path.join(__dirname + "/public/html/index.html"));
   });
 
 app.use(bodyParser.urlencoded({extended:true}));
