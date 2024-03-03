@@ -19,40 +19,29 @@ app.get('', function(req,res){
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.post('/submit-form', (req, res) => {
-    try {
-      const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
-      const jsonData = JSON.parse(data);
-      let resumePath = '';
-      if (req.files && req.files.stdResume) {
-        const resumeFile = req.files.stdResume;
-        resumePath = __dirname + '/uploads/' + resumeFile.name;
-        resumeFile.mv(resumePath, function (err) {
-          if (err) {
-            console.error('Error saving resume file:', err);
-          }
-
-        });
-      }
-      jsonData.applicants.push({
-        name: req.body.stdName,
-        email: req.body.stdEmail,
-        date: req.body.stdDate,
-        location: req.body.stdLocation,
-        phone: req.body.stdPhone,
-        school: req.body.stdSchool,
-        role: req.body.stdRole,
-        LinkedIn: req.body.stdLinkedIn,
-        resume: req.files.stdResume,
-        progress: "N/A",
-        gauge: "N/A",
-        feedback: "N/A"
-      });
-      fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
-      res.redirect('/index.html');
-    } catch (error) {
-      console.error('Error processing form submission:', error);
-    }
-  });
+  try {
+    const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
+    const jsonData = JSON.parse(data);
+    jsonData.applicants.push({
+      name: req.body.stdName,
+      email: req.body.stdEmail,
+      date: req.body.stdDate,
+      location: req.body.stdLocation,
+      phone: req.body.stdPhone,
+      school: req.body.stdScool,
+      role: req.body.stdRole,
+      LinkedIn: req.body.stdLinkedIn,
+      resume: req.body.stdResume,
+      progress: "N/A",
+      gauge: "N/A",
+      feedback: "N/A"
+    });
+    fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
+    res.redirect('/confirmation.html');
+  } catch (error) {
+    console.error('Error processing form submission:', error);
+  }
+});
 
   app.post('/submit-form-hr', (req, res) => {
     try {
@@ -67,13 +56,13 @@ app.post('/submit-form', (req, res) => {
         school: req.body.stdSchool,
         role: req.body.stdRole,
         LinkedIn: req.body.stdLinkedIn,
-        resume: req.body.stdResume,
+        //resume: req.body.stdResume,
         progress: req.body.stdProgress,
         gauge: req.body.stdInterest,
         feedback: "N/A"
       });
       fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
-      res.redirect('/index.html');
+      res.redirect('/confirmation.html');
     } catch (error) {
       console.error('Error processing form submission:', error);
     }
@@ -99,10 +88,10 @@ app.post('/submit-form', (req, res) => {
         applicant.LinkedIn = req.body.stdLinkedIn;
         applicant.progress = req.body.stdProgress;
         applicant.gauge = req.body.stdInterest;
-        applicant.feedback = req.body.stdFeedback;
+        //applicant.feedback = req.body.stdFeedback;
 
         fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData,null, 2));
-        res.redirect('/index.html');
+        res.redirect('/confirmation.html');
       }
     } catch(error){
       console.error("Error editing applicant: ", error);
@@ -130,7 +119,7 @@ app.post('/submit-form', (req, res) => {
         //applicant.feedback = req.body.stdFeedback;
 
         fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData,null, 2));
-        res.redirect('/index.html');
+        res.redirect('/confirmation.html');
       }
     } catch(error){
       console.error("Error editing applicant: ", error);
@@ -147,7 +136,7 @@ app.post('/submit-form', (req, res) => {
         if(userIndex!=-1){
           jsonData.applicants.splice(userIndex, 1);
           fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData, null, 2));
-          res.redirect('/index.html');
+          res.redirect('/confirmation.html');
         }
       } catch(error) {
 

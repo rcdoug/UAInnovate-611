@@ -3,6 +3,31 @@
 <head>
     <link rel="stylesheet" href="css/styles.css">
     <title>HR View</title>
+    <script>
+        function enableSorting() {
+        const headers = document.querySelectorAll('#applicantsTable th');
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const table = document.getElementById('applicantsTable');
+                const headerIndex = Array.from(header.parentNode.children).indexOf(header);
+
+                const rows = Array.from(table.querySelectorAll('tbody tr'));
+                const sortedRows = rows.sort((a, b) => {
+                    const aValue = a.cells[headerIndex].innerText;
+                    const bValue = b.cells[headerIndex].innerText;
+                    return aValue.localeCompare(bValue, undefined, { numeric: true, sensitivity: 'base' });
+                });
+
+                while (table.querySelector('tbody').firstChild) {
+                    table.querySelector('tbody').removeChild(table.querySelector('tbody').firstChild);
+                }
+
+                sortedRows.forEach(row => table.querySelector('tbody').appendChild(row));
+            });
+        });
+        document.addEventListener('DOMContentLoaded', enableSorting);
+    }
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function (){

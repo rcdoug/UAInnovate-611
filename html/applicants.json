@@ -1,17 +1,73 @@
 {
   "applicants": [
     {
-      "name": "Rowan",
-      "email": "t",
-      "date": "22/37",
-      "location": "Location Place Holder 1",
-      "phone": "t",
-      "role": "t",
-      "LinkedIn": "t",
-      "resume": "",
-      "progress": "Completed First Interview",
-      "gauge": "undefined",
-      "school": "undefined"
+      "name": "Ryan Douglas",
+      "email": "rdouglas1245@gmail.com",
+      "date": "05/26",
+      "location": "Alabama",
+      "phone": "619-947-5058",
+      "school": "University of Alabama, AL",
+      "role": "Internship",
+      "LinkedIn": "ryan-douglas-123123",
+      "gauge": "3",
+      "progress": "Uninterviewed"
+    },
+    {
+      "progress": "N/A",
+      "gauge": "N/A"
+    },
+    {
+      "progress": "N/A",
+      "gauge": "N/A"
+    },
+    {
+      "name": "a",
+      "email": "a",
+      "date": "a",
+      "location": "Alabama",
+      "phone": "a",
+      "school": "a",
+      "role": "a",
+      "LinkedIn": "a",
+      "gauge": "3",
+      "feedback": "N/A"
+    },
+    {
+      "progress": "N/A",
+      "gauge": "N/A"
+    },
+    {
+      "progress": "Unselected",
+      "gauge": "N/A"
+    },
+    {
+      "name": "h",
+      "email": "h",
+      "date": "h",
+      "location": "Alabama",
+      "phone": "h",
+      "school": "h",
+      "role": "h",
+      "LinkedIn": "h",
+      "progress": "Unselected",
+      "gauge": "4",
+      "feedback": "N/A"
+    },
+    {
+      "progress": "Unselected",
+      "gauge": "N/A"
+    },
+    {
+      "name": "h",
+      "email": "h",
+      "date": "h",
+      "location": "Alabama",
+      "phone": "h",
+      "school": "h",
+      "role": "h",
+      "LinkedIn": "h",
+      "progress": "Unselected",
+      "gauge": "N/A"
     }
   ]
 }
