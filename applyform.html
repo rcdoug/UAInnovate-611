@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Student Portal</title>
 </head>
@@ -47,7 +48,10 @@
             <label for="stdLinkedIn">Enter LinkedIn URL</label>
             <input type="text" id="stdLinkedIn" name="stdLinkedIn" placeholder="Enter LinkedIn URL">
             <br><br>
-            <input type="submit" value="Submit the form">
+            <label for="stdResume">Upload Resume PDF</label>
+            <input type="file" id="stdResume" name="stdResume" placeholder="Upload Resume PDF">
+            <br><br>
+            <input type="submit" onclick="getValues()" value="Submit the form">
         </form>
     </section>
 </body>
