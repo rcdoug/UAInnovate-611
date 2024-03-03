@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 const fs = require('fs');
 const bodyParser = require('body-parser');
+const fileUpload = require('express-fileupload');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -22,7 +23,17 @@ app.post('/submit-form', (req, res) => {
     try {
       const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
       const jsonData = JSON.parse(data);
-      if(req.files && req.files.)
+      let resumePath = '';
+      if (req.files && req.files.stdResume) {
+        const resumeFile = req.files.stdResume;
+        resumePath = __dirname + '/uploads/' + resumeFile.name;
+        resumeFile.mv(resumePath, function (err) {
+          if (err) {
+            console.error('Error saving resume file:', err);
+          }
+
+        });
+      }
       jsonData.applicants.push({
         name: req.body.stdName,
         email: req.body.stdEmail,
@@ -32,7 +43,7 @@ app.post('/submit-form', (req, res) => {
         school: req.body.stdScool,
         role: req.body.stdRole,
         LinkedIn: req.body.stdLinkedIn,
-        resume: req.body.stdResume,
+        resume: req.files.stdResume,
         progress: "N/A",
         gauge: "N/A",
         feedback: "N/A"

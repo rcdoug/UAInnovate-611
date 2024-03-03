@@ -1,11 +1,7 @@
 {
   "applicants": [
     {
-<<<<<<< HEAD
-      "name": "Rowan",
-=======
       "name": "t",
->>>>>>> a14d165b4a4df9b79cd696d03ace8e068ce4021d
       "email": "t",
       "date": "t",
       "location": "Location Place Holder 1",
@@ -15,10 +11,6 @@
       "resume": "",
       "progress": "N/A",
       "gauge": "N/A",
-<<<<<<< HEAD
-      "feedback": "N/A",
-      "school": "undefined"
-=======
       "feedback": "N/A"
     },
     {
@@ -33,7 +25,97 @@
       "progress": "N/A",
       "gauge": "N/A",
       "feedback": "N/A"
->>>>>>> a14d165b4a4df9b79cd696d03ace8e068ce4021d
+    },
+    {
+      "name": "Rowan Romanauskas",
+      "email": "rowan@email",
+      "date": "05/26",
+      "location": "Location Place Holder 1",
+      "phone": "6038529639",
+      "role": "Intern",
+      "LinkedIn": "rowanroman",
+      "resume": "",
+      "progress": "N/A",
+      "gauge": "N/A",
+      "feedback": "N/A"
+    },
+    {
+      "name": "a",
+      "email": "a",
+      "date": "a",
+      "location": "Location Place Holder 1",
+      "phone": "a",
+      "role": "a",
+      "LinkedIn": "a",
+      "resume": "",
+      "progress": "N/A",
+      "gauge": "N/A",
+      "feedback": "N/A"
+    },
+    {
+      "name": "Hello",
+      "email": "a",
+      "date": "a",
+      "location": "Location Place Holder 1",
+      "phone": "a",
+      "role": "a",
+      "LinkedIn": "a",
+      "resume": "",
+      "progress": "N/A",
+      "gauge": "N/A",
+      "feedback": "N/A"
+    },
+    {
+      "name": "y",
+      "email": "y",
+      "date": "y",
+      "location": "Location Place Holder 1",
+      "phone": "y",
+      "role": "y",
+      "LinkedIn": "y",
+      "resume": "",
+      "progress": "N/A",
+      "gauge": "N/A",
+      "feedback": "N/A"
+    },
+    {
+      "name": "Test",
+      "email": "t",
+      "date": "t",
+      "location": "Location Place Holder 1",
+      "phone": "t",
+      "role": "t",
+      "LinkedIn": "t",
+      "resume": "C:\\Users\\rowan\\Desktop\\UA Innovate\\UAInnovate-611/uploads/Resume.docx",
+      "progress": "N/A",
+      "gauge": "N/A",
+      "feedback": "N/A"
+    },
+    {
+      "name": "Y",
+      "email": "y",
+      "date": "y",
+      "location": "Location Place Holder 1",
+      "phone": "y",
+      "role": "y",
+      "LinkedIn": "y",
+      "resume": "C:\\Users\\rowan\\Desktop\\UA Innovate\\UAInnovate-611/uploads/Resume.docx",
+      "progress": "N/A",
+      "gauge": "N/A",
+      "feedback": "N/A"
+    },
+    {
+      "name": "x",
+      "email": "x",
+      "date": "x",
+      "location": "Location Place Holder 1",
+      "phone": "x",
+      "role": "x",
+      "LinkedIn": "x",
+      "resume": "C:\\Users\\rowan\\Desktop\\UA Innovate\\UAInnovate-611/uploads/RowanRomanauskasActivityDiagram.png",
+      "progress": "N/A",
+      "gauge": "N/A",
+      "feedback": "N/A"
     }
   ]
 }
