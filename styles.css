@@ -16,9 +16,6 @@ header .CGIheader{
 .normheader{
     text-align: right;
 }
-.images{
-    max-width: 20%;
-}
 .studentapply{
     position: relative;
     left: 50%;
@@ -58,4 +55,8 @@ header .CGIheader{
 .linkwrapper div{
     display: inline-block;
     padding: 20px;
+    width: 40%;
+}
+.images{
+    max-width: 50%;
 }
