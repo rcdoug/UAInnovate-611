@@ -8,6 +8,7 @@ header{
     background-color: #f9f9f9;
     padding: 20px;
     font-size: 28px;
+    border-bottom: 2px solid #0e0e0e;
 }
 header .CGIheader{
     text-align: left;
@@ -19,7 +20,22 @@ main ul{
     max-width: 100%;
     text-align: center;
 }
-
 .images{
     max-width: 20%;
+}
+.studentapply{
+    position: relative;
+    border: 2px solid red;
+    display: inline-block;
+    padding: 20px;
+}
+.studentsection{
+    padding: 40px;
+}
+.studentapplyform{
+    position: absolute;
+    display: inline-block;
+    text-align: left;
+    padding: 30px;
+    left: 20px;
 }
