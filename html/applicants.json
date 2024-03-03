@@ -13,61 +13,56 @@
       "progress": "Uninterviewed"
     },
     {
-      "progress": "N/A",
-      "gauge": "N/A"
-    },
-    {
-      "progress": "N/A",
-      "gauge": "N/A"
-    },
-    {
-      "name": "a",
-      "email": "a",
-      "date": "a",
+      "name": "Rowan Romanauskas",
+      "email": "rowan@romanauskas.com",
+      "date": "05/26",
       "location": "Alabama",
-      "phone": "a",
-      "school": "a",
-      "role": "a",
-      "LinkedIn": "a",
+      "phone": "555-555-5555",
+      "school": "University of Alabama, AL",
+      "role": "Internship",
+      "LinkedIn": "rowan-romanauskas-122312",
+      "progress": "Completed First Interview",
       "gauge": "3",
       "feedback": "N/A"
     },
     {
-      "progress": "N/A",
-      "gauge": "N/A"
-    },
-    {
-      "progress": "Unselected",
-      "gauge": "N/A"
-    },
-    {
-      "name": "h",
-      "email": "h",
-      "date": "h",
+      "name": "Heather Douglas",
+      "email": "heatherdouglas@gmail.com",
+      "date": "06/97",
       "location": "Alabama",
-      "phone": "h",
-      "school": "h",
-      "role": "h",
-      "LinkedIn": "h",
-      "progress": "Unselected",
-      "gauge": "4",
+      "phone": "123-123-1234",
+      "school": "Georgia Tech, GA",
+      "role": "Full-Time",
+      "LinkedIn": "heather-douglas-1235",
+      "progress": "Completed Final Interview",
+      "gauge": "5",
       "feedback": "N/A"
     },
     {
-      "progress": "Unselected",
-      "gauge": "N/A"
+      "name": "Nathan Diehn",
+      "email": "ngdiehn@crimson.ua.edu",
+      "date": "05/25",
+      "location": "Alabama",
+      "phone": "444-555-6543",
+      "school": "University of Alabama, AL",
+      "role": "Internship",
+      "LinkedIn": "nathan-diehn-4432",
+      "progress": "Uninterviewed",
+      "gauge": "2",
+      "feedback": "N/A"
     },
     {
-      "name": "h",
-      "email": "h",
-      "date": "h",
-      "location": "Alabama",
-      "phone": "h",
-      "school": "h",
-      "role": "h",
-      "LinkedIn": "h",
-      "progress": "Unselected",
-      "gauge": "N/A"
+      "name": "James Jerdedn",
+      "email": "jjerden@utk.edu",
+      "date": "05/26",
+      "location": "Georgia",
+      "phone": "153-699-1923",
+      "school": "UT Knoxville, TN",
+      "role": "Internship",
+      "LinkedIn": "james-jerden-23913",
+      "progress": "Completed First Interview",
+      "gauge": "4",
+      "feedback": "N/A"
     }
   ]
 }
