@@ -25,8 +25,19 @@
       "progress": "N/A",
       "gauge": "N/A",
       "feedback": "N/A"
+    },
+    {
+      "name": "f",
+      "email": "f",
+      "date": "f",
+      "location": "Location Place Holder 1",
+      "phone": "f",
+      "role": "f",
+      "LinkedIn": "f",
+      "resume": "",
+      "progress": "N/A",
+      "gauge": "N/A",
+      "feedback": "N/A"
     }
-    
-
   ]
 }
