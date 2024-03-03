@@ -11,7 +11,7 @@ app.use(express.static("express"));
 app.use(express.static('public'));
 
 app.get('', function(req,res){
-    res.sendFile(path.join(__dirname + "/public/html/index.html"));
+    res.sendFile(path.join(__dirname, "html", "index.html"));
   });
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -63,6 +63,10 @@ app.post('/submit-form', (req, res) => {
       console.error('Error processing form submission:', error);
     }
   });
+
+  app.post('/search-form', (req,res) => {
+
+  })
 
   app.post('/edit-form', (req,res) => {
     try{
