@@ -3,19 +3,19 @@ const mongodb = require('mongodb');
 const fs = require('fs');
 const assert = require('assert');
 
-async function main() {
-    const uri = "mongodb+srv://UAInnovate611:badpassword@cluster0.lsnt06v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; 
-    const client = new MongoClient(uri);
+const uri = "mongodb+srv://UAInnovate611:badpassword@cluster0.lsnt06v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; 
+const client = new MongoClient(uri);
 
+async function main() {
     await client.connect();
-    
     const db = client.db("CGI"); 
     var bucket = new mongodb.GridFSBucket(db, {bucketName: "Resumes"});
     const Resumes = db.collection("Resumes.files");
     
     await uploadResume(bucket, "Resume.docx", "rowan@romanauskas.com");
-    await bucket.openDownloadStreamByName("Resume.docx").pipe(fs.createWriteStream('./outputFile.docx'));
+    //await bucket.openDownloadStreamByName("Resume.docx").pipe(fs.createWriteStream('./outputFile.docx'));
 
+    await downloadResume2(bucket);
     //downloadResume(bucket, "rowan@romanauskas.com");
 
     await addApplicant(client, 
@@ -28,7 +28,7 @@ async function main() {
             LinkedIn: "RowanRoman",
             progress: "Complete",
             feedback: "good",
-            gauage: true
+            gauge: true
         })
 
     await client.close();
@@ -44,6 +44,11 @@ async function uploadResume(bucket, fileName, email){
         chunkSizeBytes: 1048576,
         metadata: {email: email}
     }));
+}
+async function downloadResume2(bucket){
+    await client.connect();
+    const db = client.db("CGI");
+    await bucket.openDownloadStreamByName("Resume.docx").pipe(fs.createWriteStream('./outputFile.docx'));
 }
 
 async function downloadResume(bucket, userEmail){
