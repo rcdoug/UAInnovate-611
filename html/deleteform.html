@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>HR Delete</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            fetch("../applicants.json")
+                .then(response => response.json())
+                .then(jsonData =>{
+                    forEach(applicant =>{
+                        if(applicant.email == document.getElementById('searchVal').getValue()){
+                            const stdNameOld = applicant.name;
+                            const stdEmailOld = applicant.email;
+                            const stdLocationOld = applicant.location;
+                            const stdPhoneOld = applicant.phone;
+                            const stdLinkedInOld = applicant.LinkedIn;
+                            const stdProgressOld = applicant.progress;
+                            const stdGaugeOld = applicant.gague;
+                            const stdFeedbackOld = applicant.feedback;
+                        }
+                    })
+                })
+        })
+    </script>
+</head>
+<body>
+
+    <header>
+        <div id="expand-box-header">
+            <a href="index.html">
+                <h1><span style="float: left; color: #e31937">CGI</span></h1> 
+            </a>
+            <h1><span style="float: right;">HR Delete</span></h1>
+            <div style="clear:both;"></div>
+        </div>
+    </header>
+
+    <div class="searchDiv">
+        <form action="">
+            <label for="searchVal">Enter Email of Profile:</label>
+            <input type="text" id="searchVal" name="searchVal" placeholder="name@address.dom" required>
+            <br>
+            <input type="submit" value="Search Accounts">
+        </form>
+    </div>  
+
+</body>
+</html>
