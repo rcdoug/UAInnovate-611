@@ -37,6 +37,8 @@
                                 document.getElementById("stdSchool").value = stdSchoolOld;
                                 document.getElementById("stdRole").value = stdRoleOld;
 
+                                document.getElementById('hiddenSearchVal').value = document.getElementById('searchVal').value
+
                                 document.getElementById('hiddenForm').style.display = 'block';
                             }
                         })
@@ -112,6 +114,8 @@
             <input type="text" id="stdInterest" name="stdInterest" placeholder="Enter Interest in Candidate (0-5)">
             <br><br>
             <input type="submit" value="Submit the form">
+            <br><br>
+            <input type ="hidden" id = "hiddenSearchVal" name = "hiddenSearchVal" value = "">
         </form>
     </div>
 </body>

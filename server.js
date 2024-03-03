@@ -71,8 +71,8 @@ app.post('/submit-form', (req, res) => {
     try{
       const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
       const jsonData = JSON.parse(data);
-      const applicantEmail = req.body.searchVal;
-      console.log(req.body.searchVal);
+      const applicantEmail = req.body.hiddenSearchVal;
+      console.log(req.body.hiddenSearchVal);
       const applicant = jsonData.applicants.find(applicant => applicant.email == applicantEmail);
       if(applicant) {
         applicant.name = req.body.stdName;
