@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <title>HR View</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Function to load and display JSON data
+            function loadJSON(){
+                $.getJSON("applicants.json", function(data){
+                    // Clear any existing data
+                    $("#applicantsTable tbody").empty();
+                    // Loop through each group of users
+                    $.each(data.applicants, function(index, applicant){
+                        var row = "<tr>" +
+                            "<td contenteditable='true'>" + applicants.name + "</td>" +
+                            "<td contenteditable='true'>" + applicants.officeLoc + "</td>" +
+                            "<td contenteditable='true'>" + applicants.grad + "</td>" +
+                            "<td contenteditable='true'>" + applicants.progress + "</td>" +
+                            "<td contenteditable='true'>" + applicants.guage + "</td>" +
+                            "</tr>";
+                            $("#applicantsTable tbody").append(row);
+                    });
+                });
+            }
+            
+            // Call the function to load JSON data when the page loads
+            loadJSON();
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <div id="expand-box-header">
+            <a href="/public/html/index.html">
+                <h1><span style="float: left; color: #e31937">CGI</span></h1> 
+            </a>
+            <h1><span style="float: right;">HR Portal</span></h1>
+            <div style="clear:both;"></div>
+        </div>
+    </header>
+
+    <table id="applicantsTable" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Office Location</th>
+                <th>Graduation Date</th>
+                <th>Progress</th>
+                <th>Gauge</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+</body>
+</html>
