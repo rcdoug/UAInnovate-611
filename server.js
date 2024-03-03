@@ -39,6 +39,20 @@ app.post('/submit-form', (req, res) => {
       console.error('Error processing form submission:', error);
     }
   });
+
+  /*app.post('/edit-form', (req,res) => {
+    try{
+      const data = fs.readFileSync('applicants.json', 'utf8');
+      const jsonData = JSON.parse(data);
+      const applicantEmail = req.body.searchVal
+      const applicant = jsonData.applicants.find(applicant => applicant.email == applicantEmail)
+      if(applicant) {
+        
+      }
+    }
+  }catch(error){
+
+  });*/
   
 const server = http.createServer(app);
 const port = 3000;
