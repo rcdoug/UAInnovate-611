@@ -67,22 +67,24 @@ app.post('/submit-form', (req, res) => {
 
 
   app.post('/edit-form', (req,res) => {
+    console.log('Received edit-form request');
     try{
       const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
       const jsonData = JSON.parse(data);
       const applicantEmail = req.body.searchVal;
+      console.log(req.body.searchVal);
       const applicant = jsonData.applicants.find(applicant => applicant.email == applicantEmail);
       if(applicant) {
         applicant.name = req.body.stdName;
         applicant.email = req.body.stdEmail;
         applicant.date = req.body.stdDate;
-        applicant.location = req.body.question;
+        applicant.location = req.body.stdLocation;
         applicant.phone = req.body.stdPhone;
-        applicant.school = req.body.stdScool;
+        applicant.school = req.body.stdSchool;
         applicant.role = req.body.stdRole;
         applicant.LinkedIn = req.body.stdLinkedIn;
         applicant.progress = req.body.stdProgress;
-        applicant.gauge = req.body.stdGauge;
+        applicant.gauge = req.body.stdInterest;
         applicant.feedback = req.body.stdFeedback;
 
         fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData,null, 2));
@@ -90,6 +92,7 @@ app.post('/submit-form', (req, res) => {
     } catch(error){
       console.error("Error editing applicant: ", error);
     }
+    console.log('made it to this')
   });
   
 const server = http.createServer(app);

@@ -23,20 +23,19 @@
                                 const stdProgressOld = applicant.progress;
                                 const stdGaugeOld = applicant.gague;
                                 const stdFeedbackOld = applicant.feedback;
-                                //const stdSchoolOld = applicant.school;
+                                const stdSchoolOld = applicant.school;
                                 const stdRoleOld = applicant.role;
                             
                                 document.getElementById("stdName").value = stdNameOld;
                                 document.getElementById("stdEmail").value = stdEmailOld;
                                 document.getElementById("stdDate").value = stdDateOld;
-                                document.getElementById("question").value = stdLocationOld;
+                                document.getElementById("stdLocation").value = stdLocationOld;
                                 document.getElementById("stdPhone").value = stdPhoneOld;
                                 document.getElementById("stdLinkedIn").value = stdLinkedInOld;
                                 document.getElementById("stdProgress").value = stdProgressOld;
                                 document.getElementById("stdInterest").value = stdGaugeOld;
-                                //document.getElementById("stdSchool").value = stdSchoolOld;
+                                document.getElementById("stdSchool").value = stdSchoolOld;
                                 document.getElementById("stdRole").value = stdRoleOld;
-                                //document.getElementById("std").value = std
 
                                 document.getElementById('hiddenForm').style.display = 'block';
                             }
@@ -80,7 +79,7 @@
             <br><br>
             <label for="stdLocation">Choose a location:</label>
             <br>
-            <select name="question" id="question" required>
+            <select name="question" id="stdLocation" required>
                 <option value="Location Place Holder 1">Location Place Holder 1</option>
                 <option value="Location Place Holder 2">Location Place Holder 2</option>
                 <option value="Location Place Holder 3">Location Place Holder 3</option>
@@ -102,7 +101,7 @@
             <input type="file" id="stdResume" name="stdResume" placeholder="Upload Resume PDF">
             <br><br>
             <label for="stdProgress">Select Candidate Progress</label>
-            <select name="question" id="question2" required>
+            <select name="question" id="stdProgress" required>
                 <option value="N/A">Unselected</option>
                 <option value="Uninterviewed">Uninterviewed</option>
                 <option value="Completed First Interview">Completed First Interview</option>

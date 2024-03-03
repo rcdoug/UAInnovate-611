@@ -1,17 +1,15 @@
 {
   "applicants": [
     {
-      "name": "Ryan",
+      "name": "Nathan",
       "email": "ryan@email",
       "date": "04/26",
-      "location": "Location Place Holder 1",
       "phone": "619-947-5058",
-      "role": "Software Intern",
+      "role": "a",
       "LinkedIn": "ryan-douglas-123",
       "resume": "",
-      "progress": "N/A",
-      "gauge": "N/A",
-      "feedback": "N/A"
+      "gauge": "undefined",
+      "school": "a"
     },
     {
       "name": "a",
