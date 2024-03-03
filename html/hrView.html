@@ -6,7 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function (){
-            fetch("../../applicants.json")
+            fetch("applicants.json")
                 .then(response => response.json())
                 .then(jsonData =>{
                     const tableBody = document.getElementById('applicantsTable').getElementsByTagName('tbody')[0];
