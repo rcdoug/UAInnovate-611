@@ -59,7 +59,7 @@ input[type=text], select {
   }
 input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    background: linear-gradient(to left,#5236ab 0%,#e41937 100%);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -164,4 +164,12 @@ input[type=submit] {
     position: absolute;
     padding: 20px;
     left: 25%;
+}
+
+.hiddenForm{
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    padding: 30px;
+    left: 20px;
 }
