@@ -36,10 +36,17 @@ async function main() {
     await client.close();
 }
 async function getValues(){
-    var stdName = document.getElementById("stdName").value;
+    var stdName = "ryan";
+    //document.getElementById("stdName").value;
+    await client.connect();
+    await addApplicant(client, 
+        {
+            name: stdName
+        })
     
 }
 async function addApplicant(client, newApplicant){
+    await client.connect();
     const result = await client.db("CGI").collection("Applicants").insertOne(newApplicant);
     console.log('New applicant created with the following id:' + result.insertedId);
 }
