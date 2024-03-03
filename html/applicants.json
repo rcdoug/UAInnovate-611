@@ -1,11 +1,7 @@
 {
   "applicants": [
     {
-<<<<<<< HEAD
       "name": "Rowan",
-=======
-      "name": "t",
->>>>>>> a14d165b4a4df9b79cd696d03ace8e068ce4021d
       "email": "t",
       "date": "t",
       "location": "Location Place Holder 1",
@@ -15,25 +11,21 @@
       "resume": "",
       "progress": "N/A",
       "gauge": "N/A",
-<<<<<<< HEAD
       "feedback": "N/A",
       "school": "undefined"
-=======
-      "feedback": "N/A"
     },
     {
-      "name": "h",
-      "email": "h",
-      "date": "h",
+      "name": "Ryan Douglas",
+      "email": "rdouglas1245@gmail.com",
+      "date": "06/26",
       "location": "Location Place Holder 2",
-      "phone": "h",
-      "role": "h",
-      "LinkedIn": "h",
+      "phone": "619-947-5058",
+      "role": "Internship",
+      "LinkedIn": "ryan-douglas-123512",
       "resume": "",
-      "progress": "N/A",
-      "gauge": "N/A",
-      "feedback": "N/A"
->>>>>>> a14d165b4a4df9b79cd696d03ace8e068ce4021d
+      "progress": "Completed First Interview",
+      "gauge": "3",
+      "school": "University of Alabama, AL"
     }
   ]
 }

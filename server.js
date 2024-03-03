@@ -10,7 +10,6 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.static("express"));
 app.use(express.static('public'));
 app.use(express.static('html'));
-app.use(fileUpload());
 
 app.get('', function(req,res){
     res.sendFile(path.join(__dirname, "html", "index.html"));
@@ -22,14 +21,13 @@ app.post('/submit-form', (req, res) => {
     try {
       const data = fs.readFileSync(__dirname + '/html/applicants.json', 'utf8');
       const jsonData = JSON.parse(data);
-      if(req.files && req.files.)
       jsonData.applicants.push({
         name: req.body.stdName,
         email: req.body.stdEmail,
         date: req.body.stdDate,
         location: req.body.stdLocation,
         phone: req.body.stdPhone,
-        school: req.body.stdScool,
+        school: req.body.stdSchool,
         role: req.body.stdRole,
         LinkedIn: req.body.stdLinkedIn,
         resume: req.body.stdResume,
@@ -54,11 +52,11 @@ app.post('/submit-form', (req, res) => {
         date: req.body.stdDate,
         location: req.body.stdLocation,
         phone: req.body.stdPhone,
-        school: req.body.stdScool,
+        school: req.body.stdSchool,
         role: req.body.stdRole,
         LinkedIn: req.body.stdLinkedIn,
         resume: req.body.stdResume,
-        progress: req.body.question2,
+        progress: req.body.stdProgress,
         gauge: req.body.stdInterest,
         feedback: "N/A"
       });
@@ -120,6 +118,7 @@ app.post('/submit-form', (req, res) => {
         //applicant.feedback = req.body.stdFeedback;
 
         fs.writeFileSync(__dirname + '/html/applicants.json', JSON.stringify(jsonData,null, 2));
+        res.redirect('/index.html');
       }
     } catch(error){
       console.error("Error editing applicant: ", error);
