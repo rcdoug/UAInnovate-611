@@ -1,32 +1,6 @@
 {
   "applicants": [
     {
-      "name": "Your Mom",
-      "email": "ryan@email",
-      "date": "04/26",
-      "phone": "619-947-5058",
-      "role": "a",
-      "LinkedIn": "ryan-douglas-123",
-      "resume": "",
-      "gauge": "5",
-      "school": "a",
-      "location": "Location Place Holder 2",
-      "progress": "Completed First Interview"
-    },
-    {
-      "name": "r",
-      "email": "r",
-      "date": "r",
-      "location": "Location Place Holder 1",
-      "phone": "r",
-      "role": "r",
-      "LinkedIn": "r",
-      "resume": "",
-      "progress": "N/A",
-      "gauge": "N/A",
-      "feedback": "N/A"
-    },
-    {
       "name": "t",
       "email": "t",
       "date": "t",
@@ -34,6 +8,19 @@
       "phone": "t",
       "role": "t",
       "LinkedIn": "t",
+      "resume": "",
+      "progress": "N/A",
+      "gauge": "N/A",
+      "feedback": "N/A"
+    },
+    {
+      "name": "h",
+      "email": "h",
+      "date": "h",
+      "location": "Location Place Holder 2",
+      "phone": "h",
+      "role": "h",
+      "LinkedIn": "h",
       "resume": "",
       "progress": "N/A",
       "gauge": "N/A",
